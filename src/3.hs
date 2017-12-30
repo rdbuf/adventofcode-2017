@@ -1,0 +1,14 @@
+-- Let's consider the `i`th square starting from 0.
+-- Length of the sides: len = i * 2 + 1  (here we use `side` as the inclusive range between the first unit and the last one, wrt the rotation)
+-- One-before-the-begin of the first side: (-i, +i+1)
+-- After that, we subsequently:
+--      - sub [1..len] from the snd
+--      - add [1..len] to the fst
+--      - add [1..len] to the snd
+--      - sub [1..len] from the fst
+
+-- Solution:
+-- 1. Find the `i`.
+-- 2. Find the side.
+-- 3. Evaluate the coordinates.
+-- 4. Sum their absolute values.
